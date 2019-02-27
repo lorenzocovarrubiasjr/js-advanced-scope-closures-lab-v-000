@@ -1,6 +1,6 @@
 function produceDrivingRange(blockRange) {
-  return function (trip) {
-    return trip < blockRange ? true : false;
+  return function (tripStart, tripEnd) {
+    return (parseInt(tripEnd) - parseInt(tripStart)) < blockRange ? `within range by ${parseInt(tripEnd) - parseInt(tripStart)}` : false;
   }
 };
 
